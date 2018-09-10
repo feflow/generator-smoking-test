@@ -23,8 +23,12 @@ cache:
   directories:
     - node_modules
 
-node_js:
-  - "lts"
+node_js: stable  #设置相应的版本
+
+install:
+  - npm install -D  #安装builder-webpack3依赖
+  - cd ./test/template-project
+  - npm install -D #安装模板项目依赖
 
 script:
   - npm test
